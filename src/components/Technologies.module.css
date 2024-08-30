@@ -1,0 +1,36 @@
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px); /* Reduced bounce distance */
+  }
+}
+
+.bounce {
+  animation: bounce 2s infinite; /* Slower bounce effect */
+  border: 1px solid #333; /* Dark grey border */
+  border-radius: 8px; /* Optional: rounded corners */
+  padding: 8px; /* Optional: padding inside the border */
+  display: inline-block; /* Ensures the border fits around the icon */
+}
+
+.bounce:nth-child(1) {
+  animation-delay: 0s;
+}
+.bounce:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.bounce:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.bounce:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.bounce:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+
+
+
