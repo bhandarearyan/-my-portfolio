@@ -16,20 +16,20 @@ const Hero = () => {
                 onInit={(typewriter) => {
                   typewriter
                     .typeString("Aryan Bhandare")
-                    .pauseFor(1000) // Optional: Pause before or after typing
+                    .pauseFor(1000) 
                     .start();
                 }}
                 options={{
                   autoStart: true,
                   loop: false,
-                  delay: 150, // Adjust typing speed here (150ms per character)
+                  delay: 150, 
                 }}
               />
             </h2>
             <motion.span 
               initial={{ opacity: 0, y: 20 }} 
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 1 }} // Increased delay for Fresher Graduate
+              transition={{ duration: 0.5, delay: 1 }} 
               className="bg-gradient-to-r from-[#ffffff] via-[#f0f0f0] to-[#63e] bg-clip-text text-4xl tracking-tight text-transparent mt-4"
             >
               Fresher Graduate
@@ -37,7 +37,7 @@ const Hero = () => {
             <motion.p 
               initial={{ opacity: 0, x: -20 }} 
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 1.25 }} // Increased delay for the paragraph
+              transition={{ duration: 0.5, delay: 1.25 }} 
               className="my-2 max-w-xl py-6 font-light tracking-tight"
             >
               {HERO_CONTENT}
@@ -52,7 +52,7 @@ const Hero = () => {
               className="w-80 h-80 rounded-lg"
               initial={{ opacity: 0, x: 20 }} 
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 1.75 }} // Increased delay for the picture
+              transition={{ duration: 0.5, delay: 1.75 }} 
             />
           </div>
         </div>

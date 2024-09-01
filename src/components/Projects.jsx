@@ -11,9 +11,9 @@ const Projects = () => {
     <div className="border-b border-neutral-900 pt-4">
       <motion.h1
         ref={headerRef}
-        initial={{ opacity: 0, y: -50 }} // Animate from above
+        initial={{ opacity: 0, y: -50 }} 
         animate={{ opacity: headerInView ? 1 : 0, y: headerInView ? 0 : -50 }}
-        transition={{ duration: 0.7, delay: 0 }} // Header animation starts immediately
+        transition={{ duration: 0.7, delay: 0 }} 
         className="my-12 text-center text-4xl font-bold"
       >
         <span className="bg-gradient-to-r from-[#ffffff] via-[#f0f0f0] to-[#63e] bg-clip-text text-transparent">
@@ -25,9 +25,9 @@ const Projects = () => {
           {PROJECTS.map((project, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 50 }} // Animate from below
+              initial={{ opacity: 0, y: 50 }} 
               animate={{ opacity: containerInView ? 1 : 0, y: containerInView ? 0 : 50 }}
-              transition={{ duration: 0.7, delay: 0.7 + index * 0.4 }} // Staggered delays, starts after header animation
+              transition={{ duration: 0.7, delay: 0.7 + index * 0.4 }} 
               className="mb-8 flex flex-col lg:flex-row lg:justify-between items-center lg:items-start"
             >
               <div className="w-full lg:w-1/4 flex justify-center lg:justify-start mb-4 lg:mb-0">

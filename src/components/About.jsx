@@ -1,4 +1,4 @@
-import aboutImg from "../assets/about.jpeg"; // Ensure the correct import path
+import aboutImg from "../assets/about.jpeg"; 
 import { ABOUT_TEXT } from "../constants";
 import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
@@ -14,7 +14,7 @@ const About = () => {
         ref={headerRef}
         initial={{ opacity: 0, x: -20 }} 
         animate={{ opacity: headerInView ? 1 : 0, x: headerInView ? 0 : -20 }}
-        transition={{ duration: 0.5, delay: 0.45 }} // Further reduced delay
+        transition={{ duration: 0.5, delay: 0.45 }} 
         className="my-20 text-center text-4xl"
       >
         <span className="bg-gradient-to-r from-[#ffffff] via-[#f0f0f0] to-[#63e] font-bold bg-clip-text text-transparent">
@@ -31,9 +31,9 @@ const About = () => {
               src={aboutImg}
               alt="about"
               className="w-60 h-90 rounded-2xl"
-              initial={{ opacity: 0, x: -50 }} // Start from left
-              animate={{ opacity: imgInView ? 1 : 0, x: imgInView ? 0 : -50 }} // Fade in and slide to position
-              transition={{ duration: 0.5, delay: 1.2 }} // Further reduced delay
+              initial={{ opacity: 0, x: -50 }} 
+              animate={{ opacity: imgInView ? 1 : 0, x: imgInView ? 0 : -50 }} 
+              transition={{ duration: 0.5, delay: 1.2 }} 
               ref={imgRef}
             />
           </div>
@@ -41,9 +41,9 @@ const About = () => {
         <div className="w-full lg:w-1/2 lg:p-8">
           <div className="flex justify-center lg:justify-start">
             <motion.p
-              initial={{ opacity: 0, x: 50 }} // Start from right
-              animate={{ opacity: textInView ? 1 : 0, x: textInView ? 0 : 50 }} // Fade in and slide to position
-              transition={{ duration: 0.5, delay: 1.6 }} // Further reduced delay
+              initial={{ opacity: 0, x: 50 }} 
+              animate={{ opacity: textInView ? 1 : 0, x: textInView ? 0 : 50 }} 
+              transition={{ duration: 0.5, delay: 1.6 }} 
               ref={textRef}
               className="my-2 max-w-xl py-6 font-light tracking-tight"
             >

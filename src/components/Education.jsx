@@ -24,9 +24,9 @@ const Education = () => {
           {EDUCATION.map((edu, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }} // Animate from left for 1st and 3rd, right for 2nd
+              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }} 
               animate={{ opacity: containerInView ? 1 : 0, x: containerInView ? 0 : (index % 2 === 0 ? -50 : 50) }}
-              transition={{ duration: 0.5, delay: index * 0.4 + 0.6 }} // Staggered delays
+              transition={{ duration: 0.5, delay: index * 0.4 + 0.6 }} 
               className="mb-8 flex flex-wrap lg:justify-center p-4"
             >
               <div className="w-full max-w-xl">

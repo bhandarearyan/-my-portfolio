@@ -13,6 +13,7 @@ import s3 from "../assets/s3.svg";
 import sns from "../assets/sns.svg";
 import sqs from "../assets/sqs.svg";
 
+
 const iconSize = '3rem'; 
 
 const Technologies = () => {

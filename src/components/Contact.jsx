@@ -22,9 +22,9 @@ const Contact = () => {
       </motion.h1>
       <motion.div
         ref={containerRef}
-        initial={{ opacity: 0, y: 50 }} // Animate from below
+        initial={{ opacity: 0, y: 50 }} 
         animate={{ opacity: containerInView ? 1 : 0, y: containerInView ? 0 : 50 }}
-        transition={{ duration: 0.7, delay: 0.7 }} // Elements animation starts after header
+        transition={{ duration: 0.7, delay: 0.7 }}
         className="text-center tracking-tighter"
       >
         <p className="my-4">{CONTACT.address}</p>

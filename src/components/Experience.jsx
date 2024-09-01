@@ -12,9 +12,9 @@ const Experience = () => {
       <motion.h1
         ref={headerRef}
         className="my-12 text-center text-4xl font-bold"
-        initial={{ opacity: 0, y: -50 }} // Animate from the top
+        initial={{ opacity: 0, y: -50 }} 
         animate={{ opacity: headerInView ? 1 : 0, y: headerInView ? 0 : -50 }}
-        transition={{ duration: 0.7 }} // Duration for header animation
+        transition={{ duration: 0.7 }} 
       >
         <span className="bg-[radial-gradient(circle,_var(--tw-gradient-stops))] from-[#ffffff] via-[#f0f0f0] to-[#63e] bg-clip-text text-transparent">
           Experience
@@ -26,18 +26,18 @@ const Experience = () => {
             <motion.div
               ref={leftRef}
               className="w-full lg:w-1/4"
-              initial={{ opacity: 0, x: -50 }} // Animate from the left
+              initial={{ opacity: 0, x: -50 }} 
               animate={{ opacity: leftInView ? 1 : 0, x: leftInView ? 0 : -50 }}
-              transition={{ duration: 0.7, delay: 0.5 + index * 0.5 }} // Stagger the delay
+              transition={{ duration: 0.7, delay: 0.5 + index * 0.5 }} 
             >
               <p className="mb-2 text-sm text-neutral-400">{experience.year}</p>
             </motion.div>
             <motion.div
               ref={rightRef}
               className="w-full max-w-xl lg:w-3/4"
-              initial={{ opacity: 0, x: 50 }} // Animate from the right
+              initial={{ opacity: 0, x: 50 }} 
               animate={{ opacity: rightInView ? 1 : 0, x: rightInView ? 0 : 50 }}
-              transition={{ duration: 0.7, delay: 0.5 + index * 0.5 }} // Stagger the delay
+              transition={{ duration: 0.7, delay: 0.5 + index * 0.5 }} 
             >
               <div className="flex items-center">
                 <h6 className="mb-2 font-semibold flex items-center">
