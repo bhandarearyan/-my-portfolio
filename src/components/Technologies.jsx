@@ -1,18 +1,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FaReact } from "react-icons/fa";
 import { useInView } from 'react-intersection-observer';
 import styles from './Technologies.module.css'; 
 import { TiHtml5 } from "react-icons/ti";
 import { FaAws, FaCss3Alt } from "react-icons/fa";
-import { SiMysql, SiPowerapps } from "react-icons/si";
+import { SiMysql, SiPowerapps, SiExpress } from "react-icons/si";
 import { DiPhp } from "react-icons/di";
 import { IoLogoJavascript } from "react-icons/io";
+import { AiOutlineOpenAI } from "react-icons/ai";
 import awsec2 from "../assets/awsec2.svg";
 import awsrds from "../assets/awsrds.svg";
 import s3 from "../assets/s3.svg";
 import sns from "../assets/sns.svg";
 import sqs from "../assets/sqs.svg";
-
 
 const iconSize = '3rem'; 
 
@@ -56,6 +57,12 @@ const Technologies = () => {
             </div>
             <div className={`p-2 ${styles.bounce}`}>
               <FaCss3Alt className="text-5xl" style={{ color: '#1572B6' }} />
+            </div>
+            <div className={`p-2 ${styles.bounce}`}>
+              <FaReact className="text-5xl" style={{ color: '#61DAFB' }} />
+            </div>
+            <div className={`p-2 ${styles.bounce}`}>
+              <SiExpress className="text-5xl" style={{ color: '#FFFFFF' }} />
             </div>
             <div className={`p-2 ${styles.bounce}`}>
               <DiPhp className="text-5xl" style={{ color: '#8993BE' }} />
@@ -140,6 +147,9 @@ const Technologies = () => {
           <div className="flex flex-wrap items-center justify-center gap-6">
             <div className={`p-2 ${styles.bounce}`}>
               <SiPowerapps className="text-5xl" style={{ color: '#742774' }} />
+            </div>
+            <div className={`p-2 ${styles.bounce}`}>
+              <AiOutlineOpenAI className="text-5xl" style={{ color: '#FFFFFF' }} />
             </div>
           </div>
         </motion.div>

@@ -14,7 +14,7 @@ const About = () => {
         ref={headerRef}
         initial={{ opacity: 0, x: -20 }} 
         animate={{ opacity: headerInView ? 1 : 0, x: headerInView ? 0 : -20 }}
-        transition={{ duration: 0.5, delay: 0.45 }} 
+        transition={{ duration: 0.5, delay: 0.3 }} // Adjusted to match other components
         className="my-20 text-center text-4xl"
       >
         <span className="bg-gradient-to-r from-[#ffffff] via-[#f0f0f0] to-[#63e] font-bold bg-clip-text text-transparent">
@@ -33,7 +33,7 @@ const About = () => {
               className="w-60 h-90 rounded-2xl"
               initial={{ opacity: 0, x: -50 }} 
               animate={{ opacity: imgInView ? 1 : 0, x: imgInView ? 0 : -50 }} 
-              transition={{ duration: 0.5, delay: 1.2 }} 
+              transition={{ duration: 0.5, delay: 0.6 }} // Adjusted to match other components
               ref={imgRef}
             />
           </div>
@@ -43,7 +43,7 @@ const About = () => {
             <motion.p
               initial={{ opacity: 0, x: 50 }} 
               animate={{ opacity: textInView ? 1 : 0, x: textInView ? 0 : 50 }} 
-              transition={{ duration: 0.5, delay: 1.6 }} 
+              transition={{ duration: 0.5, delay: 0.9 }} // Adjusted to match other components
               ref={textRef}
               className="my-2 max-w-xl py-6 font-light tracking-tight"
             >

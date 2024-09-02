@@ -1,31 +1,31 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { addDoc, collection } from "firebase/firestore"; 
-import { db } from './firebase';
+import { addDoc, collection } from 'firebase/firestore';
+import { db } from './firebase'; // Ensure this path is correct
 
 const FeedbackPage = () => {
   const { ref: headerRef, inView: headerInView } = useInView({ triggerOnce: true });
   const { ref: formRef, inView: formInView } = useInView({ triggerOnce: true });
 
-  const [name, setName] = useState("");
-  const [desc, setDesc] = useState("");
-  const [email, setEmail] = useState("");
+  const [name, setName] = useState('');
+  const [desc, setDesc] = useState('');
+  const [email, setEmail] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(name, desc, email);
-
-    await addDoc(collection(db, "Feedback"), {
-      name: name,
-      desc: desc,
-      email: email,
-    });
-
-    
-    setName("");
-    setDesc("");
-    setEmail("");
+    try {
+      await addDoc(collection(db, 'Feedback'), {
+        name,
+        desc,
+        email,
+      });
+      setName('');
+      setDesc('');
+      setEmail('');
+    } catch (error) {
+      console.error('Error adding document: ', error);
+    }
   };
 
   return (
@@ -38,7 +38,7 @@ const FeedbackPage = () => {
           className="text-center text-4xl font-bold mb-12"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: headerInView ? 1 : 0, y: headerInView ? 0 : -50 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.7, delay: 0 }} // Delay matched
         >
           <span className="bg-gradient-to-r from-[#ffffff] via-[#f0f0f0] to-[#63e] bg-clip-text text-transparent">
             Your Feedback
@@ -57,8 +57,8 @@ const FeedbackPage = () => {
               : '#1a1a2e',
           }}
           transition={{
-            duration: 1,
-            delay: 0.3,
+            duration: 0.7, // Duration matched
+            delay: 0.3, // Delay matched
             borderColor: {
               duration: 3,
               repeat: Infinity,
@@ -92,14 +92,14 @@ const FeedbackPage = () => {
               />
             </div>
             <div className="mb-6">
-              <label htmlFor="username" className="block text-sm font-medium mb-1 text-neutral-200">Email ID</label>
+              <label htmlFor="email" className="block text-sm font-medium mb-1 text-neutral-200">Email ID</label>
               <input
-                type="text"
+                type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                id="username"
+                id="email"
                 className="w-full p-2 bg-neutral-800 border border-neutral-600 rounded focus:outline-none focus:ring-2 focus:ring-cyan-500 text-neutral-300 placeholder-neutral-500"
-                placeholder="Your username"
+                placeholder="Your email"
                 required
               />
             </div>

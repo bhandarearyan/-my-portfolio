@@ -13,7 +13,7 @@ const Projects = () => {
         ref={headerRef}
         initial={{ opacity: 0, y: -50 }} 
         animate={{ opacity: headerInView ? 1 : 0, y: headerInView ? 0 : -50 }}
-        transition={{ duration: 0.7, delay: 0 }} 
+        transition={{ duration: 0.5, delay: 0.3 }} // Adjusted delay to match the other components
         className="my-12 text-center text-4xl font-bold"
       >
         <span className="bg-gradient-to-r from-[#ffffff] via-[#f0f0f0] to-[#63e] bg-clip-text text-transparent">
@@ -27,7 +27,7 @@ const Projects = () => {
               key={index}
               initial={{ opacity: 0, y: 50 }} 
               animate={{ opacity: containerInView ? 1 : 0, y: containerInView ? 0 : 50 }}
-              transition={{ duration: 0.7, delay: 0.7 + index * 0.4 }} 
+              transition={{ duration: 0.5, delay: 0.6 + index * 0.4 }} // Adjusted to ensure consistency with other components
               className="mb-8 flex flex-col lg:flex-row lg:justify-between items-center lg:items-start"
             >
               <div className="w-full lg:w-1/4 flex justify-center lg:justify-start mb-4 lg:mb-0">

@@ -13,7 +13,7 @@ const Contact = () => {
         ref={headerRef}
         initial={{ opacity: 0, y: -50 }} // Animate from above
         animate={{ opacity: headerInView ? 1 : 0, y: headerInView ? 0 : -50 }}
-        transition={{ duration: 0.7, delay: 0 }} // Header animation starts immediately
+        transition={{ duration: 0.7, delay: 0 }} // Header animation delay
         className="my-10 text-center text-4xl font-bold"
       >
         <span className="bg-[radial-gradient(circle,_var(--tw-gradient-stops))] from-[#ffffff] via-[#f0f0f0] to-[#63e] bg-clip-text text-transparent">
@@ -24,7 +24,7 @@ const Contact = () => {
         ref={containerRef}
         initial={{ opacity: 0, y: 50 }} 
         animate={{ opacity: containerInView ? 1 : 0, y: containerInView ? 0 : 50 }}
-        transition={{ duration: 0.7, delay: 0.7 }}
+        transition={{ duration: 0.7, delay: 0.7 }} // Content animation delay
         className="text-center tracking-tighter"
       >
         <p className="my-4">{CONTACT.address}</p>

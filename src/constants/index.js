@@ -3,13 +3,13 @@ import project2 from "../assets/projects/project-2.jpg";
 import project3 from "../assets/projects/project-3.jpg";
 import project4 from "../assets/projects/project-4.jpg";
 
-export const HERO_CONTENT = `I’m a tech enthusiast with hands-on experience in cloud computing and web development. I’ve built dynamic websites and managed cloud infrastructure on AWS, focusing on efficiency and performance. Solving real-world problems drives me, like when I developed a Blood Bank Management System and worked on Bitcoin Price Prediction.
+export const HERO_CONTENT = `I’m a tech enthusiast with hands-on experience in cloud computing and web development. I’ve built dynamic websites and managed cloud infrastructure on AWS, focusing on efficiency and performance. Solving real-world problems drives me.
 
 Through internships at top companies, I’ve sharpened my technical skills, led teams, and successfully managed projects. Please feel free to contact me via Linkedin. I’m always looking forward to an insightful conversation over coffee, or even better, a round of skydiving!`;
 
 export const ABOUT_TEXT = `I’m a computer engineer with a passion for creating solutions that drive real impact. I’ve explored cloud computing and web development extensively, working on projects that bring efficiency and purpose to life. My internship experiences taught me the value of leadership and adaptability. I’ve guided teams, navigated tight deadlines, and always sought to go the extra mile. Learning doesn’t stop for me; I’m always looking to sharpen my skill set, driven by a constant curiosity and a desire to innovate. Excellent in presenting and make people understand.
 
-I love to travel and I often plan trips with my family. But solo travelling gives me the bliss that I crave for. Every year I look forward to exploring new places and catching up on some lifetime memories.`;
+I love to travel and I often plan trips with my family. Every year I look forward to exploring new places and catching up on some lifetime memories.`;
 
 export const EXPERIENCES = [
   {
@@ -66,29 +66,29 @@ export const PROJECTS = [
     title: "E-Learning Portal",
     image: project1,
     description:
-      "Built a user-friendly E-Learning Portal for efficient access to educational resources and courses.",
-    technologies: ["HTML5", "CSS3", "Boostrap", "Php", "Javascript","MySql"],
+      "An interactive platform for online education with a ReactJs frontend, Bootstrap design, PHP backend, and MySQL database.",
+    technologies: ["HTML5", "ReactJs", "Boostrap", "Php", "Javascript","MySql"],
   },
   {
-    title: "Gearup Sport’s Android Application",
+    title: "VidsumAI",
     image: project2,
     description:
-      "Created an Android app for Gearup Sport, offering users easy access to sports equipment and training resources.",
-    technologies: ["Android Studio", "Java", "Php", "MySql"],
+      "Converts videos to audio using FFmpeg, transcribes with Whisper, and summarizes with GPT-3.5.",
+    technologies: ["NextJs", "Express", "Tailwind", "OpenAI"],
   },
-  {
-    title: "Bitcoin Price Prediction",
-    image: project3,
-    description:
-      "Developed a model to predict Bitcoin prices using historical data and machine learning techniques.",
-    technologies: ["Python", "Google Collab"],
-  },
+  // {
+  //   title: "Bitcoin Price Prediction",
+  //   image: project3,
+  //   description:
+  //     "Developed a model to predict Bitcoin prices using historical data and machine learning techniques.",
+  //   technologies: ["Python", "Google Collab"],
+  // },
   {
     title: "Blood Bank Management System",
     image: project4,
     description:
       "Created a solution to simplify donor management and enhance the coordination of blood donations.",
-    technologies: ["HTML", "CSS", "Php", "MySql", "Hosted on AWS using 4 Resources"],
+    technologies: ["HTML5", "ReactJs", "Php", "MySql", "Hosted on AWS using 4 Resources"],
   },
 ];
 

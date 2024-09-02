@@ -3,9 +3,19 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 const Experience = () => {
-  const { ref: headerRef, inView: headerInView } = useInView({ triggerOnce: true });
-  const { ref: leftRef, inView: leftInView } = useInView({ triggerOnce: true });
-  const { ref: rightRef, inView: rightInView } = useInView({ triggerOnce: true });
+  // Modify the threshold to start the animation earlier (when 50% of the component is in view)
+  const { ref: headerRef, inView: headerInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5, // Trigger animation when 50% of the element is in view
+  });
+  const { ref: leftRef, inView: leftInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+  const { ref: rightRef, inView: rightInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
 
   return (
     <div className="border-b border-neutral-900 pt-4">
@@ -14,7 +24,7 @@ const Experience = () => {
         className="my-12 text-center text-4xl font-bold"
         initial={{ opacity: 0, y: -50 }} 
         animate={{ opacity: headerInView ? 1 : 0, y: headerInView ? 0 : -50 }}
-        transition={{ duration: 0.7 }} 
+        transition={{ duration: 0.5 }} // Reduced duration for faster animation
       >
         <span className="bg-[radial-gradient(circle,_var(--tw-gradient-stops))] from-[#ffffff] via-[#f0f0f0] to-[#63e] bg-clip-text text-transparent">
           Experience
@@ -28,7 +38,7 @@ const Experience = () => {
               className="w-full lg:w-1/4"
               initial={{ opacity: 0, x: -50 }} 
               animate={{ opacity: leftInView ? 1 : 0, x: leftInView ? 0 : -50 }}
-              transition={{ duration: 0.7, delay: 0.5 + index * 0.5 }} 
+              transition={{ duration: 0.5, delay: 0.3 * index }} // Reduced delay between elements
             >
               <p className="mb-2 text-sm text-neutral-400">{experience.year}</p>
             </motion.div>
@@ -37,7 +47,7 @@ const Experience = () => {
               className="w-full max-w-xl lg:w-3/4"
               initial={{ opacity: 0, x: 50 }} 
               animate={{ opacity: rightInView ? 1 : 0, x: rightInView ? 0 : 50 }}
-              transition={{ duration: 0.7, delay: 0.5 + index * 0.5 }} 
+              transition={{ duration: 0.5, delay: 0.3 * index }} // Reduced delay between elements
             >
               <div className="flex items-center">
                 <h6 className="mb-2 font-semibold flex items-center">

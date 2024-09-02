@@ -29,7 +29,7 @@ const Hero = () => {
             <motion.span 
               initial={{ opacity: 0, y: 20 }} 
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 1 }} 
+              transition={{ duration: 0.5, delay: 0.3 }} // Matched delay with Experience component
               className="bg-gradient-to-r from-[#ffffff] via-[#f0f0f0] to-[#63e] bg-clip-text text-4xl tracking-tight text-transparent mt-4"
             >
               Fresher Graduate
@@ -37,7 +37,7 @@ const Hero = () => {
             <motion.p 
               initial={{ opacity: 0, x: -20 }} 
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 1.25 }} 
+              transition={{ duration: 0.5, delay: 0.6 }} // Matched delay with Experience component
               className="my-2 max-w-xl py-6 font-light tracking-tight"
             >
               {HERO_CONTENT}
@@ -52,7 +52,7 @@ const Hero = () => {
               className="w-80 h-80 rounded-lg"
               initial={{ opacity: 0, x: 20 }} 
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 1.75 }} 
+              transition={{ duration: 0.5, delay: 0.9 }} // Matched delay with Experience component
             />
           </div>
         </div>

@@ -13,7 +13,7 @@ const Education = () => {
         className="text-center text-4xl font-bold my-12"
         initial={{ opacity: 0, y: -50 }} // Animate from the top
         animate={{ opacity: headerInView ? 1 : 0, y: headerInView ? 0 : -50 }}
-        transition={{ duration: 0.7 }} // Duration for header animation
+        transition={{ duration: 0.5, delay: 0.3 }} // Adjusted delay to match other components
       >
         <span className="bg-gradient-to-r from-[#ffffff] via-[#f0f0f0] to-[#63e] bg-clip-text text-transparent">
           Education
@@ -26,7 +26,7 @@ const Education = () => {
               key={index}
               initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }} 
               animate={{ opacity: containerInView ? 1 : 0, x: containerInView ? 0 : (index % 2 === 0 ? -50 : 50) }}
-              transition={{ duration: 0.5, delay: index * 0.4 + 0.6 }} 
+              transition={{ duration: 0.5, delay: 0.6 + index * 0.3 }} // Adjusted to maintain consistency with other components
               className="mb-8 flex flex-wrap lg:justify-center p-4"
             >
               <div className="w-full max-w-xl">
